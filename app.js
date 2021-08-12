@@ -9,7 +9,7 @@ app.use(express.json());
 app.use("/items", shopping_routes);
 
 
-app.use(function(req, res, next) {
+app.use((req, res, next) => {
 
   return next(new helperClass.erroClass("Not Found", 404));
 
